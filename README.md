@@ -1,6 +1,10 @@
 Titanium OAuth Client
 ================================
 
+What I changed?
+---------------------------------------
+I just added two more files implementing an Oauth Client for XING.com and changing the Twitter Client.
+
 What is it?
 ---------------------------------------
 This is a very simple and user friendly OAuth Client for Titanium Mobile. I'm currently using it for Twitter.
