@@ -5,6 +5,24 @@ What I changed?
 ---------------------------------------
 I just added two more files implementing an Oauth Client for XING.com and changing the Twitter Client.
 
+Example:
+
+	Ti.include('js/xing_oauth.js');
+
+	var xing_oauth = new XingOAuth('Consumer key','Consumer secret');
+
+	xing_oauth.requestToken(function(e) {
+		if (!e.success) {
+			alert('request failed');
+			return;
+		}
+		xing_oauth.request({ method : 'GET', action : 'https://api.xing.com/v1/users/me/contacts.json?user_fields=id,display_name', parameters : [] }, function(data) {
+			var response = JSON.parse(data);
+			var users = response.contacts.users;
+			var total = response.contacts.total;
+		}
+	});
+
 What is it?
 ---------------------------------------
 This is a very simple and user friendly OAuth Client for Titanium Mobile. I'm currently using it for Twitter.
