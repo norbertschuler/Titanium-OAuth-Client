@@ -161,7 +161,7 @@ var XingOAuth = function(ck, cs) {
 
 			// Set Tokens
 			Ti.App.Properties.setString('oauthTokenXing', this.responseText.match(/oauth_token=([^&]+)/)[1]);
-			Ti.App.Properties.setString('oauthTokenXingingSecret', this.responseText.match(/oauth_token_secret=([^&]+)/)[1]);
+			Ti.App.Properties.setString('oauthTokenXingSecret', this.responseText.match(/oauth_token_secret=([^&]+)/)[1]);
 
 			// Access Token Secret
 			accessor.tokenSecret = Ti.App.Properties.getString('accessTokenXingSecret');
@@ -207,7 +207,7 @@ var XingOAuth = function(ck, cs) {
 			]
 		};
 
-		accessor.tokenSecret = Ti.App.Properties.getString('oauthTokenXingingSecret');
+		accessor.tokenSecret = Ti.App.Properties.getString('oauthTokenXingSecret');
 
 		OAuth.setTimestampAndNonce(message);
 		OAuth.setParameter(message, "oauth_timestamp", OAuth.timestamp());
@@ -228,6 +228,7 @@ var XingOAuth = function(ck, cs) {
 			Ti.App.Properties.setString('accessTokenXing', this.responseText.match(/oauth_token=([^&]+)&/)[1]);
 			Ti.App.Properties.setString('accessTokenXingSecret', this.responseText.match(/oauth_token_secret=([^&]+)&/)[1]);
 			Ti.App.Properties.setString('xing_user_id', this.responseText.match(/user_id=([^&]+)/)[1]);
+			Ti.API.debug("found user id = " + Ti.App.Properties.getString('xing_user_id'));
 
 			// Login
 			callback({ success : true });
@@ -303,7 +304,7 @@ var XingOAuth = function(ck, cs) {
 
 	this.logout = function() {
 		Ti.App.Properties.setString('oauthTokenXing', null);
-		Ti.App.Properties.setString('oauthTokenXingingSecret', null);
+		Ti.App.Properties.setString('oauthTokenXingSecret', null);
 		Ti.App.Properties.setString('accessTokenXing', null);
 		Ti.App.Properties.setString('accessTokenXingSecret', null);
 		Ti.App.Properties.setString('xing_user_id', null);
