@@ -3,7 +3,7 @@ Titanium OAuth Client
 
 What I changed?
 ---------------------------------------
-I just added two more files implementing an Oauth Client for XING.com and changing the Twitter Client.
+I just added three more files implementing an Oauth Client for XING and Linkedin and a changed Twitter Client.
 
 Example:
 
