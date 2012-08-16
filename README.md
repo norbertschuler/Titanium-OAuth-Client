@@ -3,7 +3,7 @@ Titanium OAuth Client
 
 What I changed?
 ---------------------------------------
-I just added three more files implementing an Oauth Client for XING and Linkedin and a changed Twitter Client. I used this for implementing my quiz app you can find in Google Play: https://play.google.com/store/apps/details?id=com.epublica.contactquiz .
+I added four more files implementing an Oauth Client for XING and Linkedin, Google and a changed Twitter Client. I used this for implementing my quiz app you can find here: http://www.epublica.de/quiz/
 
 Example:
 
