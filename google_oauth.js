@@ -58,7 +58,7 @@ var GoogleOAuth = function(ck, cs) {
 
 	// Get Authorization PIN
 	var getPIN = function(callback) {
-		var html = authWebView.evalJS("document.getElementsByTagName('b')[1].firstChild.data");
+		var html = authWebView.evalJS("document.getElementById('verification_code').innerHTML");
 		if(html != '') {
 			var regex = new RegExp("([a-zA-Z0-9_\-]+)", "m");
 			if(regex) {
