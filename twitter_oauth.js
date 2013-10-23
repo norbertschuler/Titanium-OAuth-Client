@@ -44,10 +44,10 @@ var TwitterOAuth = function(ck, cs) {
 		consumerSecret : cs,
 		serviceProvider : {
 			signatureMethod : 'HMAC-SHA1',
-			requestTokenURL : 'https://twitter.com/oauth/request_token',
-			userAuthorizationURL : 'https://twitter.com/oauth/authorize',
-			accessTokenURL : 'https://twitter.com/oauth/access_token',
-			oauthVersion : '1.0'
+			requestTokenURL : 'https://api.twitter.com/oauth/request_token',
+			userAuthorizationURL : 'https://api.twitter.com/oauth/authorize',
+			accessTokenURL : 'https://api.twitter.com/oauth/access_token',
+			oauthVersion : '1.0a'
 		}
 	};
 
@@ -294,6 +294,7 @@ var TwitterOAuth = function(ck, cs) {
 			// Logout
 			self.dispatch('logout');
 		};
+		xhr.setAutoEncodeUrl(false);
 		xhr.open(options.method, finalUrl, false);
 		xhr.send();
 
