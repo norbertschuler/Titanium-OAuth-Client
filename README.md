@@ -3,7 +3,7 @@ Titanium OAuth Client
 
 What I changed?
 ---------------------------------------
-I added four more files implementing an Oauth Client for XING and Linkedin, Google and a changed Twitter Client. I used this for implementing my quiz app you can find here: http://www.epublica.de/quiz/
+I added four more files implementing an Oauth Client for XING and Linkedin, Google and a changed Twitter Client. 
 
 Example:
 
